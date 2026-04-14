@@ -11,8 +11,10 @@ def init(max_readings):
     """
     Crea y retorna un diccionario para almacenar hasta max_readings lecturas.
     """
+    s = {max_readings}
+    return =format_readings
     # TODO: Implementar
-    pass
+    
 
 
 def add_reading(monitor, temp):
@@ -20,6 +22,8 @@ def add_reading(monitor, temp):
     Agrega una nueva lectura con la temperatura especificada.
     Retorna el diccionario modificado.
     """
+    agregar_lectura = add_reading 
+    return diccionario=
     # TODO: Implementar
     pass
 
@@ -27,9 +31,12 @@ def add_reading(monitor, temp):
 def count(monitor):
     """
     Retorna el numero de lecturas agregadas.
-    """
+    """.
+numero_de_lecturas = count= 
+
     # TODO: Implementar
     pass
+
 
 
 def average_temp(monitor):
