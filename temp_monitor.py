@@ -40,13 +40,39 @@ def highest_temp(monitor):
 
 
 def coldest_window(monitor, k):
-    
-    
+    readings = monitor['readings']
+
+    if len(readings) < k:
+        return None
+    minimo = 999999
+    for i in range(len(readings) - k + 1):
+        suma = 0
+
+        for j in range(i, i + k):
+            suma = suma + readings[j]
+
+        promedio = suma / k
+
+        if promedio < minimo:
+            minimo = promedio
+
+    return minimo
 
 
 def longest_rising_streak(monitor):
-
-
+    readings = monitor['readings']
+    if len(readings) == 0:
+        return 0
+    maxima = 1
+    actual = 1
+    for i in range(1, len(readings)):
+        if readings[i] > readings[i-1]:
+            actual = actual + 1
+            if actual > maxima:
+                maxima = actual
+        else:
+            actual = 1
+        return maxima
 
 def main():
     # crear un monitor para temperaturas de Bogota (12 horas, 6am-5pm)
